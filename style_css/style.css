@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: url(background_image.jpg) repeat-y;
+    background-size: 100%;
+}
+
+h1{
+    text-align: center;
+    color: deeppink;
+}
+
+.wrapper{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    
+    background-color: aquamarine;
+
+    
+}
+
+.main{
+    
+    padding: 30px;
+    flex: 1 1 auto;
+}
+
+.footer{
+    padding: 30px;
+    background-color: aqua;
+    
+}
+
+
+input[type="text"], button{
+    width: 13%;
+    padding: 9.2px;
+    background-color: #d2c693;
+    vertical-align: middle;
+    border: none;
+}
+
+
+button{
+    width: 40px;
+}
+
+nav.menu li{
+    list-style: none;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 10px;
+    padding: 7px 18px;
+    position: relative;
+    
+}
+
+
+
+.tool-bar{
+    width: 100%;
+    background-color: #AB9F6E;
+    
+}
+
+nav.menu{
+    width: 80%;
+    display: inline-block;
+    text-align: center;
+    
+}
+
+
+a{
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.price-list{
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+
+    
+}
+
+table{
+    padding: 10px;
+    margin: auto;
+    border-collapse: collapse;
+    font-size: 20px;
+}
+
+.table1{
+    padding: 10px;
+    background: coral;
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.header-wrapper{
+    display: flex;
+    flex-direction: column;
+}
+
+.top-header{
+    min-height: 50px;
+    margin: 5px 0;
+    flex: 1 auto;
+}
+
+nav.menu li ul{
+    display: none;
+    position: absolute;
+    border: 1px solid #AB9F6E;
+    background-color: inherit;
+    top: 100%;
+    left: 0;
+}
+
+nav.menu li:hover > ul{
+    display: flex;
+    flex-direction: column;
+} 
+
+
+nav.menu li ul ul{
+    display: none;
+    position: absolute;
+    border: 1px solid #AB9F6E;
+    background-color: inherit;
+    top: 0;
+    left: 100%;
+}
+
+.price-list tr td:nth-child(even){
+    text-align: center;
+}
+
+
+
+nav.menu li:hover{
+    background-color: #d2c693;
+}

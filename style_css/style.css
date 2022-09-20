@@ -23,9 +23,10 @@ h1{
 }
 
 .header {
-    
+    width: 100%;
     background-color: aquamarine;
-
+    display: flex;
+    flex-direction: column;
     
 }
 
@@ -41,51 +42,57 @@ h1{
     
 }
 
-
-input[type="text"], button{
-    width: 13%;
-    padding: 9.2px;
+.input1[type="text"], button{
+    width: 67%;
+    padding: 7.0px;
     background-color: #d2c693;
-    vertical-align: middle;
     border: none;
 }
 
 
 button{
-    width: 40px;
+    width: 30px;
 }
 
-nav.menu li{
+.menu li{
     list-style: none;
-    display: inline-block;
-    vertical-align: middle;
-    margin: 0 10px;
+    font-variant: small-caps;
     padding: 7px 18px;
     position: relative;
-    
 }
 
+.tool-bar nav{
+    width: 80%;
+    flex: 1 auto;
+}
 
+.tool-bar .form{
+    width: 20%;
+}
 
 .tool-bar{
-    width: 100%;
+    
     background-color: #AB9F6E;
+    display: flex;
+    flex-direction: row;
     
 }
 
-nav.menu{
-    width: 80%;
-    display: inline-block;
-    text-align: center;
-    
+.menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    line-height: 15px;
 }
 
 
-a{
+.menu a{
     text-decoration: none;
     color: white;
-    font-size: 15px;
+    
+    letter-spacing: 0;
     font-family: 'Noto Sans', sans-serif;
+    
 }
 
 .price-list{
@@ -106,14 +113,10 @@ table{
 .table1{
     padding: 10px;
     background: coral;
-    font-size: 20px;
     font-family: 'Courier New', Courier, monospace;
 }
 
-.header-wrapper{
-    display: flex;
-    flex-direction: column;
-}
+
 
 .top-header{
     min-height: 50px;
@@ -121,26 +124,28 @@ table{
     flex: 1 auto;
 }
 
-nav.menu li ul{
+.menu li ul{
     display: none;
     position: absolute;
-    border: 1px solid #AB9F6E;
-    background-color: inherit;
+    border: 1px solid brown;
+    background-color: #AB9F6E;
+    width: 170px;
+    font-size: 12px;
     top: 100%;
     left: 0;
 }
 
-nav.menu li:hover > ul{
+.menu li:hover > ul{
     display: flex;
     flex-direction: column;
 } 
 
 
-nav.menu li ul ul{
+.menu li ul ul{
     display: none;
     position: absolute;
-    border: 1px solid #AB9F6E;
-    background-color: inherit;
+    border: 1px solid brown;
+    background-color: #AB9F6E;
     top: 0;
     left: 100%;
 }
@@ -151,6 +156,6 @@ nav.menu li ul ul{
 
 
 
-nav.menu li:hover{
+.menu li:hover{
     background-color: #d2c693;
 }

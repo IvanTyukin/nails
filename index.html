@@ -18,6 +18,7 @@
                 
                 <div class="tool-bar">
                     <nav>
+                        <button id="menu_btn"><i class="fa fa-bars"></i></button>
                         <ul class="menu" >
                             <li>
                                 <a href="#">О САЛОНЕ</a>
@@ -205,6 +206,20 @@
     </div>
     
 
-    
+    <script>
+        'use strict'
+
+        window.onscroll = () => {
+            const toolBar = document.querySelector('.tool-bar');
+            const Y = window.scrollY;
+
+            if (Y > 70){
+                toolBar.classList.add('tool-bar_fixed');
+            }
+            else{
+                toolBar.classList.remove('tool-bar_fixed');
+            }
+        };
+    </script>
 </body>
 </html>

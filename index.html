@@ -12,6 +12,26 @@
     <div class="wrapper">
         <header class="header"> 
             
+                <div class="menu-mobile-container">
+                    <div class="menu-mobile-container__header">
+
+                    </div>
+                    <div class="menu-mobile-container__main">
+                        <nav>
+                            <ul class="mobile-menu">
+                                <li>О САЛОНЕ</li>
+                                <li>УСЛУГИ</li>
+                                <li>ЦЕНЫ</li>
+                                <li>КОМАНДА</li>
+                                <li>КОНТАКТЫ</li>
+                            </ul>
+                        </nav>
+                        
+                    </div>
+                    <div class="menu-mobile-container__footer">
+
+                    </div>
+                </div>
                 <div class="top-header">
                     <h1>Lorem ipsum dolor sit amet consectetur adipisicing.</h1>
                 </div>
@@ -208,10 +228,17 @@
 
     <script>
         'use strict'
+        let menuBtn = document.querySelector('#menu_btn');
+        let menuMobileContainer = document.querySelector('.menu-mobile-container')
+        
+        menuBtn.addEventListener('click', function (){
+            menuMobileContainer.classList.add('active');
+        });
 
         window.onscroll = () => {
             const toolBar = document.querySelector('.tool-bar');
             const Y = window.scrollY;
+            
 
             if (Y > 70){
                 toolBar.classList.add('tool-bar_fixed');

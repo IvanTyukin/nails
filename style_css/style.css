@@ -204,16 +204,18 @@ table{
         display: flex;
     }
 
-
+    .menu-mobile-container__main{
+        width: 100%;
+    }
+    
     .mobile-menu{
         list-style: none;
         margin: 20px auto;
         text-align: center;
-        width: 600px;
     }
 
     .mobile-menu li{
-        border-bottom: 2px solid saddlebrown;
+        border-bottom: 2px solid gray;
         line-height: 40px;
     }
 

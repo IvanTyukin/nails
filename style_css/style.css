@@ -219,6 +219,10 @@ table{
         line-height: 40px;
     }
 
+    .menu-mobile__btn{
+        background-color: white;
+    }
+    
     .menu {
       /* flex-flow: column nowrap; */
         display: none;

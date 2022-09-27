@@ -201,13 +201,15 @@ table{
     }
 
     .menu-mobile-container.active{
-        display: flex;
+        display: flex; /*flex*/
+        opacity: 0;
+        animation: showDiv 0.3s forwards;
     }
 
     .menu-mobile-container__main{
         width: 100%;
     }
-    
+
     .mobile-menu{
         list-style: none;
         margin: 20px auto;
@@ -215,14 +217,18 @@ table{
     }
 
     .mobile-menu li{
-        border-bottom: 2px solid gray;
+        border-bottom: 1px solid gray;
         line-height: 40px;
     }
 
     .menu-mobile__btn{
         background-color: white;
     }
-    
+
+    .fa-bars.rotate{
+        animation: 0.3s ease-in 0s rot;
+    }
+
     .menu {
       /* flex-flow: column nowrap; */
         display: none;
@@ -234,4 +240,18 @@ table{
     .tool-bar .form{
         width: 60%;
     }
+
+    @keyframes rot {
+        0%{transform: rotate(0);}
+        100%{transform: rotate(180deg);}
+    }
+
+    @keyframes showDiv {
+        0%, 99% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
 }

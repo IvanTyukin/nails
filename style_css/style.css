@@ -131,6 +131,7 @@ table{
     display: none;
     position: absolute;
     border: 1px solid brown;
+    border-top: none;
     background-color: white;
     font-size: 12px;
     top: 100%;

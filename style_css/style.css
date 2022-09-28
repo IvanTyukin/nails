@@ -153,7 +153,7 @@ table{
     position: absolute;
     border: 1px solid brown;
     background-color: white;
-    /* блоки вложенного уровня съезжают на 1 px вниз*/
+    top: 0;/* блоки вложенного уровня съезжают на 1 px вниз*/
     left: 100%;
 }
 

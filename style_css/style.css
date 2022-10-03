@@ -53,13 +53,14 @@ h1{
 
 button{
     width: 30px;
+    cursor: pointer;
 }
 
 
 .menu li{
     list-style: none;
     font-variant: small-caps;
-    padding: 10px 18px;
+    padding: 10px 0;
     position: relative;
     white-space: nowrap;   /*Запрещаем перенос строки в блоке*/
 }
@@ -67,6 +68,7 @@ button{
 .tool-bar nav{
     width: 80%;
     flex: 1 1 auto;
+   
 }
 
 .tool-bar .form{
@@ -81,10 +83,12 @@ button{
     
 }
 
+
+
 .menu{
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
+    justify-content: center;
     line-height: 15px;
 }
 
@@ -92,7 +96,7 @@ button{
 .menu a{
     text-decoration: none;
     color: white;
-    
+    padding: 0 18px;
     letter-spacing: 0;
     font-family: 'Noto Sans', sans-serif;
     
@@ -130,7 +134,7 @@ table{
 .menu li ul{
     display: none;
     position: absolute;
-    border: 1px solid brown;
+    border: 1px solid #AB9F6E;
     border-top: none;
     background-color: white;
     font-size: 12px;
@@ -152,7 +156,7 @@ table{
 .menu li ul ul{
     display: none;
     position: absolute;
-    border: 1px solid brown;
+    border: 1px solid #AB9F6E;
     border-top: none;
     background-color: white;
     top: 0;/* блоки вложенного уровня съезжают на 1 px вниз*/
@@ -204,6 +208,7 @@ table{
 
     .menu-mobile-container.active{
         display: flex; /*flex*/
+        flex-direction: column;
         opacity: 0;
         animation: showDiv 0.3s forwards;
     }
@@ -225,6 +230,7 @@ table{
 
     .menu-mobile__btn{
         background-color: white;
+        cursor: pointer;
     }
 
     .fa-bars.rotate{

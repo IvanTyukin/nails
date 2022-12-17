@@ -206,6 +206,25 @@ table{
         z-index: 999;
     }
 
+    .mobile-menu  ul  {
+        display: none;
+    }
+
+    .mobile-menu li:hover > ul{
+        display: block;
+    }
+
+
+    .menu-mobile-container__top-header{
+        min-height: 50px;
+        margin: 5px 0;
+    }
+
+    .menu-mobile-container__header{
+        
+        width: 100%;
+    }
+
     .menu-mobile-container.active{
         display: flex; /*flex*/
         flex-direction: column;
@@ -215,6 +234,8 @@ table{
 
     .menu-mobile-container__main{
         width: 100%;
+        padding: 30px;
+        flex: 1 1 auto;
     }
 
     .mobile-menu{
@@ -226,6 +247,16 @@ table{
     .mobile-menu li{
         border-bottom: 1px solid gray;
         line-height: 40px;
+        list-style: none;
+    }
+    
+    .mobile-menu li ul {
+        background-color: rgb(229, 245, 170);
+    }
+
+    .mobile-menu a {
+        text-decoration: none;
+        display: block;
     }
 
     .menu-mobile__btn{

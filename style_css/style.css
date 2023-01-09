@@ -1,0 +1,583 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+*, *:before,*:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f5b6cc;
+}
+
+h1{
+    text-align: center;
+    color: black;
+    margin: 40px;
+}
+
+h2, 
+h3,
+h4 {
+    margin: 20px;
+}
+
+.wrapper{
+    min-height: 100vh;
+    max-width: 100%;
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.header {
+    position: fixed;
+    background-color: #f5b6cc;
+    width: 100%;
+    z-index: 10;
+}
+
+
+main{
+    
+    padding: 30px;
+    flex: 1 1 auto;
+    max-width: 100%;
+    
+  
+}
+
+
+.footer{
+    padding: 30px;
+    background-color: #AB9F6E;
+    
+}
+
+
+
+
+
+
+.menu li{
+    list-style: none;
+    font-variant: small-caps;
+    line-height: 33px;
+    /* padding: 10px 0; */
+    position: relative;
+    white-space: nowrap;   /*Запрещаем перенос строки в блоке*/
+}
+
+
+.tool-bar nav{
+    width: 80%;
+    height: 35px;
+    flex: 1 1 auto;
+   
+}
+
+
+
+.tool-bar{
+    position: relative;
+    background-color: #AB9F6E;
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    align-items:center;
+}
+
+.menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    line-height: 15px;
+}
+
+
+.menu a{
+    text-decoration: none;
+    color: white;
+    padding: 0 18px;
+    letter-spacing: 0;
+    font-family: 'Noto Sans', sans-serif;
+    
+}
+
+.price-list{
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+
+    
+}
+
+
+
+table{
+    padding: 10px;
+    margin: auto;
+    border-collapse: collapse;
+    font-size: 20px;
+}
+
+.table1{
+    padding: 10px;
+    background: #AB9F6E;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.workTime tr,
+.workTime td {
+    padding: 5px 15px;
+}
+
+.top-header{
+    min-height: 50px;
+    margin: 5px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu li ul{
+    display: none;
+    position: absolute;
+    border: 1px solid #AB9F6E;
+    background-color: white;
+    font-size: 12px;
+    top: 100%;
+    left: -1px;
+}
+
+.menu li ul a{
+    color: black;
+    font-weight: bold;
+}
+
+.menu li:hover > ul{
+    display: flex;
+    flex-direction: column;
+} 
+
+
+.menu li ul ul{
+    display: none;
+    position: absolute;
+    border: 1px solid #AB9F6E;
+    background-color: white;
+    top: -1px;/* блоки вложенного уровня съезжают на 1 px вниз*/
+    left: 100%;
+}
+
+#menu_btn{
+    display: none;
+    border: none;
+    background-color: #AB9F6E;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+
+
+
+.price-list tr td:nth-child(even){
+    text-align: center;
+}
+
+
+
+.menu li:hover{
+    background-color: #d2c693;
+}
+
+
+
+.phone {
+    max-width: 120px;
+    order: 3;
+    margin: 20px 5px 20px 0;
+}
+
+.address {
+    max-width: 150px;
+    order: 1;
+    margin: 20px 0 20px 5px;
+    color: #474435;
+}
+
+.name {
+    font-size: 20px;
+    width: 256px;
+    
+}
+
+.vacation {
+    width: 256px;
+    font-size: 15px;
+}
+
+.logo {
+    margin:  20px 0 20px 0;
+    width: auto;
+    text-align: center;
+    min-height: 100px;
+    order: 2;
+}
+
+.logo img {
+    width: auto;
+    height: 100px;
+
+}
+
+
+.slogan,
+.name,
+.place {
+    font-family: 'Pacifico', cursive;
+    color: #AB9F6E;
+}
+
+.slogan {
+    color:#474435;
+    font-size: 10px;
+}
+
+.place {
+    font-size: 15px;
+}
+
+.leftimg {
+    float: left;
+    margin: 7px 7px 7px 7px;
+}
+
+
+
+.workerInfo p img {
+    width: 256px;
+    height: auto;
+}
+
+.clearfix {
+    overflow: hidden;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*Слайдер карусель -- стилизация*/
+
+
+.slider .slick-dots li.slick-active button {
+    background-color:#AB9F6E;
+    border: 1px solid #fff;
+}
+
+
+
+.slider__item, .slider__item2 {
+    transition: all 0.3s ease 0s;
+    text-align: center;
+    margin:  0 80px 0 0;
+}
+
+.slider__item1 {
+    transition: all 0.3s ease 0s;
+    text-align: center;
+    margin:  0 80px 10px 0;
+}
+.slider__item1 img {
+    width: 200px;
+    height: auto;
+}
+
+.slider__item2 img {
+    width: 200px;
+    height: auto;
+}
+
+
+.slick-list {
+    overflow: hidden;
+}
+
+.slick-track {
+    display: flex;
+    align-items: flex-start;
+}
+
+
+/*Конкретный слайдер*/
+
+.slider,
+.slider1,
+.slider2 {
+    position: relative;
+    display: block;
+    padding: 0 10px;
+}
+
+.slider .slick-arrow {
+    position: absolute;
+    top: 50%;
+    margin: -30px 0 0 0;
+    z-index: 10;
+    font-size: 0;
+    width: 30px;
+    height: 50px;
+}
+
+.slider .slick-arrow.slick-prev {
+    left: 0;
+}
+
+.slider .slick-arrow.slick-next {
+    right: 0;
+}
+
+
+.slider .slick-arrow.slick-disabled {
+    opacity: 0.2;
+}
+
+/*Точки*/
+
+.slider .slick-dots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.slider .slick-dots li {
+    list-style: none;
+    margin: 0 10px;
+}
+
+.slider .slick-dots button {
+    font-size: 0;
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    border: 1px solid black;
+    border-radius: 50%;
+}
+
+figure img {
+    width: 256px;
+    height: 256px;
+}
+
+
+.header__burger {
+    display: none;
+    cursor: pointer;
+}
+
+@media (min-width: 1200px) {
+    main {
+        padding: 30px;
+        flex: 1 1 auto;
+        padding: 260px calc(50% - 600px) 100px calc(50% - 600px);
+        max-width: 100%;
+        margin: 0 auto; 
+    }
+
+    .top-header {
+        width: 1200px;
+        margin: 0 calc(50% - 600px);
+    }
+}
+
+@media (max-width: 1999px) and (min-width: 767px) {
+    main {
+        padding: 260px 30px 100px 30px;
+    }
+}
+
+@media (max-width:767px){
+
+    /*Стилизация меню-бургера*/
+    .header__burger {
+        margin: 0 10px;
+        display: block;
+        position: relative;
+        width: 25px;
+        height: 35px;
+    }
+
+    .header__burger span {
+        position: absolute;
+        background-color: #fff;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        top: 15px;
+        transition: all 0.3s ease 0s;
+    }
+
+    .header__burger::before,
+    .header__burger::after {
+        content: '';
+        background-color: #fff;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        left: 0;
+        transition: all 0.3s ease 0s;
+    }
+
+    .header__burger::before {
+        top: 8px;
+    }
+
+    .header__burger::after {
+        bottom: 10px;
+    }
+
+
+    .header__burger.active::before {
+        transform: rotate(45deg);
+        top: 16px;
+    }
+
+    .header__burger.active span {
+        transform: scale(0);
+    }
+
+    .header__burger.active::after {
+        transform: rotate(-45deg);
+        bottom: 17px;
+    }
+
+    main {
+        padding: 180px 30px 100px 30px;
+    }
+    
+    /*Контент*/
+
+    input,
+    .address,
+    .phone {
+        display: none;
+        margin: 0;
+        padding: 10px 0;
+    }
+
+    .logo {
+        width: 100%;
+    }
+
+    .tool-bar nav {
+        width: 50%;
+    }
+
+    .logo img {
+        width: 70px;
+        height: auto;
+    }
+
+    
+    .logo {
+        margin: 5px 0;
+    }
+
+    .phone ,
+    .address {
+        font-size: 12px;
+    }
+
+    .phone {
+        width: 110px;
+    }
+
+    .workerInfo p img {
+        width: 200px;
+        height: auto;
+    }
+
+    /*Настройка меню*/
+    .menu {
+      /* flex-flow: column nowrap; */
+        display: none;
+        
+    }
+    #menu_btn{
+        cursor: pointer;
+        display: block;
+    }
+
+    .header.active {
+        position: fixed;
+        background-color:#f5b6cc;
+        width: 100%;
+        height: 100vh;
+        overflow: scroll;
+    }
+
+    body.lock {
+        overflow: hidden;
+    }
+    
+
+    .menu.active{
+        display: block;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 35px;
+        left: 0;
+        line-height: 15px;
+        list-style: none;
+        text-align: center;
+    }
+
+    .menu.active li{
+        border-bottom: 1px solid gray;
+        line-height: 40px;
+        list-style: none;
+        position: static;
+    }
+    
+    .menu.active li ul {
+        background-color: rgb(229, 245, 170);
+        position: static;
+    }
+    
+    .menu a{
+        text-decoration: none;
+        color: black;
+        padding: 0 18px;
+        letter-spacing: 0;
+        font-family:  sans-serif;
+        
+    }
+
+    .menu.active li ul ul {
+        position: static;
+    }
+
+
+    menu.active li:hover > ul{
+        display: block;
+    }
+    
+}
+
+@media (max-width: 330px) {
+    figure img {
+        width: 200px;
+        height: 200px;
+    }
+}
+

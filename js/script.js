@@ -41,7 +41,7 @@
 
 
         // в IE Y - undefined. Исправлено заменой ScrollY на pageYoffset  
-
+  
         window.addEventListener('scroll', function() {
             const Y = window.pageYOffset;
             const topHeaderHeight = topHeader.offsetHeight;

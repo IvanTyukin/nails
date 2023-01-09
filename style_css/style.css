@@ -36,8 +36,9 @@ h4 {
     background-color: #f5b6cc;
     width: 100%;
     z-index: 10;
+    top: 0;
+    transition: top 0.3s ease;
 }
-
 
 main{
     

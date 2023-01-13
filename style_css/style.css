@@ -1,0 +1,784 @@
+@import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+*, *:before,*:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #fff;
+    font-family: 'Noto Sans', sans-serif;
+    letter-spacing: 1px;
+    font-size: 12px;  /* Где надо, прописывать свойство: font-weight: bolder; */
+}
+
+h1{
+    text-align: center;
+    color: black;
+    margin: 40px auto;
+    font-size: 22px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #AB9F6E;
+    width: 200px;
+}
+
+h2, 
+h3,
+h4 {
+    text-align: center;
+    margin: 20px 0;
+    font-weight: bolder;
+}
+
+.wrapper{
+    min-height: 100vh;
+    max-width: 100%;
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+    overflow: hidden;
+    align-items: center;
+}
+
+.header {
+    position: fixed;
+    background-color: #fff;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    transition: top 0s linear;
+}
+
+/* Добавляем стилизацию перемещения header-a для экрана телефонов */
+
+
+
+
+
+/*  */
+
+
+main{
+    
+    padding: 30px;
+    flex: 1 1 auto;
+    max-width: 100%;
+    
+  
+}
+
+
+.footer{
+    padding: 30px;
+    background-color: #AB9F6E;
+    width: 100%;
+}
+
+
+
+
+
+
+
+.tool-bar{
+    display: flex;
+    position: relative;
+    background-color: #AB9F6E;
+    width: 100%;
+    height: 39px;
+    flex-direction: row;
+    align-items:center;
+    justify-content: center;
+}
+
+.tool-bar nav{
+    flex: 1 1 auto;
+    max-width: 800px;
+}
+
+.menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+.menu li{
+    list-style: none;
+    font-variant: small-caps;
+    /* padding: 10px 0; */
+    position: relative;
+    white-space: nowrap;   /*Запрещаем перенос строки в блоке*/
+}
+
+
+.menu a{
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    padding: 9px 18px;
+    line-height: 37px;
+    letter-spacing: 0;
+    font-family: 'Didact Gothic', sans-serif;
+    font-weight: 200;
+    
+}
+
+.price-list{
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.price-list p {
+    cursor: pointer;
+    border: 1px solid #AB9F6E;
+    border-radius: 5px;
+    padding: 1px 0 1px 10px;
+}
+
+table{
+    padding: 10px;
+    margin: auto;
+    border-collapse: collapse;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.table {
+    display: none;
+}
+
+table.open {
+    display: block;
+}
+
+/*  */
+
+table td {
+    padding: 10px;
+    font-size: 12px;
+}
+
+table tr:nth-child(odd) {
+    background-color: #DCD9CD;
+}
+
+table td:nth-child(n+2) {
+    text-align: center;
+}
+
+table th{
+    padding: 10px;
+    background-color: #AB9F6E;
+}
+
+.workTime {
+    font-weight: bolder;
+}
+
+.workTime td {
+    padding: 5px 15px;
+}
+
+.top-header{                        /* top-header не является flex-элементом, так как входит в контейнер header. Header -- flex-элемент */
+    min-height: 50px;
+    margin: 5px 0;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.menu li ul{
+    display: none;
+    position: absolute;
+    border: 2px solid #AB9F6E;
+    background-color: white;
+    font-size: 12px;
+    top: 100%;
+    left: -1px;
+}
+
+.menu li ul a{
+    color: black;
+    font-weight: bold;
+}
+
+.menu li:hover > ul{
+    display: flex;
+    flex-direction: column;
+} 
+
+
+.menu li ul ul{
+    display: none;
+    position: absolute;
+    border: 1px solid #AB9F6E;
+    background-color: white;
+    top: -1px;/* блоки вложенного уровня съезжают на 1 px вниз*/
+    left: 100%;
+}
+
+#menu_btn{
+    display: none;
+    border: none;
+    background-color: #AB9F6E;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+
+
+
+.price-list tr td:nth-child(even){
+    text-align: center;
+}
+
+
+
+.menu li:hover{
+    background-color: #DCD9CD;
+}
+
+.menu li a:hover {
+    color: #000;
+}
+
+
+
+.phone {
+    max-width: 180px;
+    order: 3;
+    margin: 20px 0px 20px 0;
+}
+
+.phone a {
+    color: #474435; 
+    line-height: 33px;
+    font-size: 19px;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.address {
+    max-width: 180px;
+    line-height: 33px;
+    font-size: 18px;
+    order: 1;
+    margin: 20px 0 20px 0px;
+    color: #474435;
+    font-weight: bolder;
+}
+
+.name {
+    font-size: 20px;
+    width: 256px;
+    color: #AB9F6E;
+    font-weight: bold;
+    line-height: 19px;
+}
+
+.vacation {
+    width: 256px;
+    line-height: 19px;
+    font-weight: bolder;
+}
+
+.logo {
+    margin:  20px 12% 20px 12%;
+    width: auto;
+    text-align: center;
+    min-height: 100px;
+    order: 2;
+}
+
+.logo img {
+    width: auto;
+    height: 100px;
+
+}
+
+
+.slogan,
+.place {
+    font-family: 'Pacifico', cursive;
+    color: #AB9F6E;
+}
+
+.slogan {
+    color:#474435;
+    font-size: 12px;
+}
+
+.place {
+    line-height: 39px;
+    font-size: 30px;
+}
+
+.leftimg {
+    float: left;
+    margin: 7px 7px 7px 7px;
+}
+
+
+
+.workerInfo p img {
+    width: 256px;
+    height: auto;
+}
+
+.clearfix {
+    overflow: hidden;
+}
+
+.phone1 {
+    display: none;
+}
+
+.button::after {
+    content: '+ ';
+    font-size: 18px;
+    font-weight: bolder;
+    color: #AB9F6E;
+    padding: 0 20px;
+}
+
+.button.open::after {
+    content: '-';
+}
+/* Стилизация блока услуги */
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px 0;
+    justify-content: center;
+}
+
+.direction p img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+.direction {
+    text-align: center;
+    width: 180px;
+    height: 220px;
+    margin: 15px;
+    border: .5px solid #AB9F6E;
+    font-size: 14px;
+    line-height: 19px;
+}
+
+.direction figcaption{
+    color: #AB9F6E;
+    font-weight: bold;
+    
+}
+
+.direction:hover {
+    border: 3px solid #AB9F6E;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Слайдер карусель -- стилизация*/
+
+
+.slider .slick-dots li.slick-active button {
+    background-color:#AB9F6E;
+    border: 1px solid #fff;
+}
+
+
+
+.slider__item, .slider__item2,
+.slider__item3 {
+    transition: all 0.3s ease 0s;
+    text-align: center;
+    margin:  0 40px 0 40px;
+    
+}
+
+.slider__item1 {
+    transition: all 0.3s ease 0s;
+    text-align: center;
+    margin:  0 80px 10px 0;
+}
+.slider__item1 img,
+.slider__item2 img,
+.slider__item3 img {
+    width: 200px;
+    height: auto;
+    
+}
+
+
+.slick-list {
+    overflow: hidden;
+}
+
+.slick-track {
+    display: flex;
+    align-items: flex-start;
+}
+
+
+
+/*Конкретный слайдер*/
+
+.slider,
+.slider1,
+.slider2 {
+    position: relative;
+    display: block;
+    padding: 0 10px;
+}
+
+.slider .slick-arrow {
+    position: absolute;
+    top: 107%;
+    margin: -30px 0 0 0;
+    z-index: 10;
+    font-size: 0;
+    width: 30px;
+    height: 50px;
+    border: none;
+}
+
+.slider .slick-arrow.slick-prev {
+    background: url('../images/arrowleft.svg') 0 0 / 100% no-repeat;
+    left: 30%;
+}
+
+.slider .slick-arrow.slick-next {
+    background: url('../images/arrowright.svg') 0 0 / 100% no-repeat;
+    right: 30%;   
+}
+
+
+.slider .slick-arrow.slick-disabled {
+    opacity: 0.2;
+}
+
+/*Точки*/
+
+.slider .slick-dots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.slider .slick-dots li {
+    list-style: none;
+    margin: 0 10px;
+}
+
+.slider .slick-dots button {
+    font-size: 0;
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    border: 1px solid black;
+    border-radius: 50%;
+}
+
+figure img {
+    width: 230px;
+    height: 229px;
+}
+
+
+
+
+
+
+
+
+.header__burger {
+    display: none;
+    cursor: pointer;
+}
+
+@media (min-width: 1200px) {
+    main {
+        
+        flex: 1 1 auto;
+        padding: 300px 0 100px 0;
+        max-width: 1200px;
+        
+    }
+
+    
+}
+
+@media (max-width: 1200px) and (min-width: 767px) {
+    main {
+        padding: 300px 30px 100px 30px;
+    }
+}
+
+@media (max-width:767px){
+
+    /*Стилизация меню-бургера*/
+    .header__burger {
+        margin: 0 10px;
+        display: block;
+        position: relative;
+        width: 20px;
+        height: 19px;
+    }
+
+    .header__burger span {
+        position: absolute;
+        background-color: #000;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        top: 8px;
+        transition: all 0.3s ease 0s;
+    }
+
+    .header__burger::before,
+    .header__burger::after {
+        content: '';
+        background-color: #000;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        left: 0;
+        transition: all 0.3s ease 0s;
+    }
+
+    .header__burger::before {
+        top: 2px;
+    }
+
+    .header__burger::after {
+        bottom: 2px;
+    }
+
+
+    .header__burger.active::before {
+        transform: rotate(45deg);
+        top: 8px;
+    }
+
+    .header__burger.active span {
+        transform: scale(0);
+    }
+
+    .header__burger.active::after {
+        transform: rotate(-45deg);
+        bottom: 9px;
+    }
+
+    main {
+        padding: 230px 30px 100px 30px;
+    }
+    
+    /*Контент*/
+
+    input,
+    .address,
+    .phone {
+        display: none;
+        margin: 0;
+        padding: 10px 0;
+    }
+
+    .logo {
+        width: 100%;
+    }
+
+    .tool-bar {
+        background-color: #fff;
+        border-top: 1px solid #AB9F6E;
+        border-bottom: 1px solid #AB9F6E;
+    }
+
+    .tool-bar nav {
+        width: 30%;
+        
+    }
+
+    .logo img {
+        width: 70px;
+        height: auto;
+    }
+
+    
+    .logo {
+        margin: 5px 0;
+    }
+
+    .phone ,
+    .address {
+        font-size: 12px;
+    }
+
+    .phone {
+        width: 110px;
+    }
+
+    .phone1 {
+        display: inline-flex; 
+        text-align: center;
+        font-weight: bolder;
+        margin: 0 10px;
+    }
+
+    .phone1:hover a {
+        color: #AB9F6E
+    }
+
+    .phone1 a {
+        color: #211F21;
+        line-height: 24px;
+        text-decoration: none;
+    }
+
+    .workerInfo p img {
+        width: 200px;
+        height: auto;
+    }
+
+    /*Настройка меню*/
+    .menu {
+      /* flex-flow: column nowrap; */
+        display: none;
+        
+    }
+    #menu_btn{
+        cursor: pointer;
+        display: block;
+    }
+
+    .header.active {
+        position: fixed;
+        background-color:#fff;
+        width: 100%;
+        /* Костыль для прыгающего меню */
+        height: 200vh;   
+        overflow: scroll;
+    }
+
+    body.lock {
+        overflow: hidden;
+    }
+
+    .menu.active{
+        display: block;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 70px;
+        left: 0;
+        line-height: 15px;
+        list-style: none;
+        text-align: center;
+    }
+
+    .menu.active li{
+        border-bottom: 1px solid gray;
+        line-height: 39px;
+        list-style: none;
+        position: static;
+    }
+    
+    .menu.active li ul {
+        background-color: rgb(229, 245, 170);
+        position: static;
+    }
+    
+    .menu a{
+        text-decoration: none;
+        color: black;
+        padding: 0 18px;
+        letter-spacing: 0;
+        font-family:  sans-serif;
+        
+    }
+
+    .menu.active li ul ul {
+        position: static;
+    }
+
+
+    menu.active li:hover > ul{
+        display: block;
+    }
+
+    .table td::before {
+        position: static;
+        display: block;
+    }
+
+    .table td {
+        display: block;
+        padding-left: 0;
+        border: none;
+    }
+
+    .table th:nth-child(n+2) {
+        display: none;
+    }
+
+    .direction {
+        width: 180px
+    }
+    
+}
+
+@media (max-width: 330px) {
+    figure img {
+        width: 190px;
+        height: 189px;
+    }
+    .direction {
+        text-align: center;
+        width: 180px;
+        height: 220px;
+        margin: 15px;
+        border: .5px solid #AB9F6E;
+        font-size: 14px;
+        line-height: 19px;
+    }
+}
+
